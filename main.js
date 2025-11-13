@@ -1,4 +1,4 @@
-let choices = ['dog', 'mouse', 'cat'];
+let choices = ['dog 🐶', 'mouse 🐭', 'cat 🐱'];
 let humanChoice = '';
 let humanScore = 0;
 let computerScore = 0;
@@ -25,8 +25,8 @@ function playGame () {
         imgChoices.forEach(img => {
             img.style.pointerEvents = 'none';
         });
-        if(computerScore > humanScore) {document.getElementById("total").innerText = "💻 Computer reigns supreme!"}
-        else {document.getElementById("total").innerText = "🐾 You win the battle of the beasts!"}
+        if(computerScore > humanScore) {document.getElementById("victor").innerText = "💻 Computer reigns supreme!"}
+        else {document.getElementById("victor").innerText = "🐾 You win the battle of the beasts!"}
 
         const btn = document.createElement("button");
         btn.innerText = "Play again?";
@@ -111,27 +111,27 @@ function playRound () {
         ];
         roundText = ties[Math.floor(Math.random() * ties.length)];
     }
-    else if (humanChoice === 'dog' && computerChoice === 'cat') {
+    else if (humanChoice === 'dog 🐶' && computerChoice === 'cat 🐱') {
         roundText = "Dog chases the Cat! 💨\n" + dogLines[Math.floor(Math.random() * dogLines.length)];
         humanScore++;
     } 
-    else if (humanChoice === 'cat' && computerChoice === 'mouse') {
+    else if (humanChoice === 'cat 🐱' && computerChoice === 'mouse 🐭') {
         roundText = "Cat pounces on the Mouse! 🐱🐭\n" + catLines[Math.floor(Math.random() * catLines.length)];
         humanScore++;
     } 
-    else if (humanChoice === 'mouse' && computerChoice === 'dog') {
+    else if (humanChoice === 'mouse 🐭' && computerChoice === 'dog 🐶') {
         roundText = "Mouse outsmarts the Dog! 🧠🐭\n" + mouseLines[Math.floor(Math.random() * mouseLines.length)];
         humanScore++;
     } 
-    else if (computerChoice === 'dog' && humanChoice === 'cat') {
+    else if (computerChoice === 'dog 🐶' && humanChoice === 'cat 🐱') {
         roundText = "Dog chases the Cat up a tree! 🌳\n" + dogLines[Math.floor(Math.random() * dogLines.length)];
         computerScore++;
     } 
-    else if (computerChoice === 'cat' && humanChoice === 'mouse') {
+    else if (computerChoice === 'cat 🐱' && humanChoice === 'mouse 🐭') {
         roundText = "Cat corners the Mouse! 😼\n" + catLines[Math.floor(Math.random() * catLines.length)];
         computerScore++;
     } 
-    else if (computerChoice === 'mouse' && humanChoice === 'dog') {
+    else if (computerChoice === 'mouse 🐭' && humanChoice === 'dog 🐶') {
         roundText = "Mouse sneaks past the Dog! 🐭💨\n" + mouseLines[Math.floor(Math.random() * mouseLines.length)];
         computerScore++;
     }

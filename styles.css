@@ -1,4 +1,27 @@
 body {
+    text-align: center;
     color:white;
     background-color: rgb(97, 54, 4);
+    cursor: url('https://icons.iconarchive.com/icons/iconsmind/outline/32/Dog-Paw-icon.png'), auto;
+
+}
+
+img {
+    margin: 50px;
+}
+#dog:hover {
+    cursor: url('./assets/icons8-dog-paw-30.png') 8 8, pointer;
+}
+#cat:hover {
+    cursor: url('./assets/icons8-cat-footprint-24.png') 8 8, pointer;
+} 
+#mouse:hover {
+    cursor: url('./assets/icons8-year-of-rat-24.png') 8 8, pointer;
+}
+
+/* footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 44%;
 }
