@@ -3,10 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="./main.js"></script>
+    <title>Dog Cat Mouse</title>
+    <script src="./main.js" defer></script>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+    <h1>Dog, Cat, Mouse</h1>
+    <p><strong>🐾 Rules:</strong><br>
+        🐶 Dog beats 🐱 Cat,<br>
+        🐱 Cat beats 🐭 Mouse,<br>
+        🐭 Mouse beats 🐶 Dog —<br>
+        <em>May chaos fill the house!</em> 🏠💥</p>
+    <div id="resetDiv"></div>
+    <div class="images">
+        <img src="https://placehold.co/250x150" alt="dog" id="dog" data-choice="dog">
+        <img src="https://placehold.co/250x150" alt="cat" id="cat" data-choice="cat">
+        <img src="https://placehold.co/250x150" alt="mouse" id="mouse" data-choice="mouse">
+    </div>
+    <p id="choices"></p>
+    <p id="roundWinner"></p>
+    <div class="scores">
+        <p id="humanScore"></p>
+        <p id="computerScore"></p>
+    </div>
+    <p id="total"></p>
     
 </body>
 </html>
