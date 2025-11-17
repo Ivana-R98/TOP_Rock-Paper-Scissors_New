@@ -109,7 +109,7 @@ footer {
     right: 20%;
 }
 #top-right {
-    top: 15%;
+    top: 12%;
 }
 #top-rightTop {
     top: 10%;
@@ -174,10 +174,10 @@ footer {
         right: 2%;
     } 
     #top-right {
-        top: 43%;
+        top: 45%;
     }
     #top-rightTop {
-        top: 38%;
+        top: 40%;
     }
 }
 
@@ -203,5 +203,11 @@ footer {
     #paw-heart {
         bottom: 25%;
         right: 3%;
+    }
+    #top-right {
+        top: 45%;
+    }
+    #top-rightTop {
+        top: 40%;
     }
 }
