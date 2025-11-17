@@ -4,6 +4,8 @@ let humanScore = 0;
 let computerScore = 0;
 let humanScorePara = document.getElementById("humanScore");
 let computerScorePara = document.getElementById("computerScore");
+humanScorePara.innerText = "Human Score: 0";
+computerScorePara.innerText = "Computer Score: 0";
 
 const imgChoices = document.querySelectorAll('img');
 imgChoices.forEach(img => {
@@ -26,15 +28,19 @@ function playGame () {
             img.style.pointerEvents = 'none';
         });
         if(computerScore > humanScore) {document.getElementById("victor").innerText = "💻 Computer reigns supreme!"}
-        else {document.getElementById("victor").innerText = "🐾 You win the battle of the beasts!"}
+        else {document.getElementById("victor").innerText = "🐾 You win the battle of the beasts! 🎉"}
 
         const btn = document.createElement("button");
         btn.innerText = "Play again?";
         btn.addEventListener("click", () => {
             window.location.reload();
         })
-        document.body.appendChild(btn);
+        document.body.insertBefore(btn, document.querySelector(".credits"));
     } 
+}
+
+function boldText(text) {
+    return `<span class="boldText">${text}</span>`;
 }
 
 function playRound () {
@@ -94,7 +100,7 @@ function playRound () {
 
     let roundText = "";
     let computerChoice = getComputerChoice();
-    document.getElementById("choices").innerText = `Human chooses: ${humanChoice}
+    document.getElementById("choices").innerText = `Human chooses: ${humanChoice}, 
     Computer chooses: ${computerChoice}`;
 
     if(computerChoice === humanChoice) {
@@ -112,33 +118,33 @@ function playRound () {
         roundText = ties[Math.floor(Math.random() * ties.length)];
     }
     else if (humanChoice === 'dog 🐶' && computerChoice === 'cat 🐱') {
-        roundText = "Dog chases the Cat! 💨\n" + dogLines[Math.floor(Math.random() * dogLines.length)];
+        roundText = `${boldText("Dog chases the Cat!")} 💨<br>` + dogLines[Math.floor(Math.random() * dogLines.length)];
         humanScore++;
     } 
     else if (humanChoice === 'cat 🐱' && computerChoice === 'mouse 🐭') {
-        roundText = "Cat pounces on the Mouse! 🐱🐭\n" + catLines[Math.floor(Math.random() * catLines.length)];
+        roundText = `${boldText("Cat pounces on the Mouse!")} 🐱🐭<br>` + catLines[Math.floor(Math.random() * catLines.length)];
         humanScore++;
     } 
     else if (humanChoice === 'mouse 🐭' && computerChoice === 'dog 🐶') {
-        roundText = "Mouse outsmarts the Dog! 🧠🐭\n" + mouseLines[Math.floor(Math.random() * mouseLines.length)];
+        roundText = `${boldText("Mouse outsmarts the Dog!")} 🧠🐭<br>` + mouseLines[Math.floor(Math.random() * mouseLines.length)];
         humanScore++;
     } 
     else if (computerChoice === 'dog 🐶' && humanChoice === 'cat 🐱') {
-        roundText = "Dog chases the Cat up a tree! 🌳\n" + dogLines[Math.floor(Math.random() * dogLines.length)];
+        roundText = `${boldText("Dog chases the Cat up a tree!")} 🌳<br>` + dogLines[Math.floor(Math.random() * dogLines.length)];
         computerScore++;
     } 
     else if (computerChoice === 'cat 🐱' && humanChoice === 'mouse 🐭') {
-        roundText = "Cat corners the Mouse! 😼\n" + catLines[Math.floor(Math.random() * catLines.length)];
+        roundText = `${boldText("Cat corners the Mouse!")} 😼<br>` + catLines[Math.floor(Math.random() * catLines.length)];
         computerScore++;
     } 
     else if (computerChoice === 'mouse 🐭' && humanChoice === 'dog 🐶') {
-        roundText = "Mouse sneaks past the Dog! 🐭💨\n" + mouseLines[Math.floor(Math.random() * mouseLines.length)];
+        roundText = `${boldText("Mouse sneaks past the Dog!")} 🐭💨<br>` + mouseLines[Math.floor(Math.random() * mouseLines.length)];
         computerScore++;
     }
 
     // Combine both
     const extra = funnyLines[Math.floor(Math.random() * funnyLines.length)];
-    document.getElementById("roundWinner").innerText = `${roundText}\n${extra}`;
+    document.getElementById("roundWinner").innerHTML = `${roundText}<br>${extra}`;
 
     humanScorePara.innerText = "Human Score: " + humanScore;
     computerScorePara.innerText = "Computer Score: " + computerScore;

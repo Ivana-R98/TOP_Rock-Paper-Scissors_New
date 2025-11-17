@@ -6,39 +6,49 @@
     <title>Dog Cat Mouse Showdown</title>
     <link rel="stylesheet" href="./styles.css">
     <script src="./main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <h1>Dog, Cat, Mouse Showdown <small>(Furball Frenzy)</small></h1>
         <p><em>The ultimate battle of paws, claws, and squeaks!</em></p>
     </header>
-    <section class="rules">
-        <h2><strong>🐾 Rules:</strong></h2>
-        <p><br>
-            🐶 Dog beats 🐱 Cat,<br>
-            🐱 Cat beats 🐭 Mouse,<br>
-            🐭 Mouse beats 🐶 Dog —<br>
-            <em>May chaos fill the house!</em> 🏠💥</p>
-    </section>
     <main>
-        <div class="scores">
-            <p id="humanScore"></p>
-            <p id="computerScore"></p>
-        </div>
-        <div class="images">
-            <img src="https://placehold.co/250x150" alt="Dog" id="dog" data-choice="dog 🐶">
-            <img src="https://placehold.co/250x150" alt="Cat" id="cat" data-choice="cat 🐱">
-            <img src="https://placehold.co/250x150" alt="Mouse" id="mouse" data-choice="mouse 🐭">
-        </div>
-        <p id="choices"></p>
-        <p id="roundWinner"></p>
-        <p id="victor"></p>
+        <section class="rules">
+            <h2><strong>🐾 Rules:</strong></h2>
+            <p>
+                🐶 Dog beats 🐱 Cat,<br>
+                🐱 Cat beats 🐭 Mouse,<br>
+                🐭 Mouse beats 🐶 Dog —<br>
+                <em>May chaos fill the house!</em> 🏠💥</p>
+        </section>
+        <section class="game">
+            <div class="scores">
+                <p id="humanScore"></p>
+                <p id="computerScore"></p>
+            </div>
+            <div class="images">
+                <img src="./imgs/dog.png" alt="Dog" id="dog" data-choice="dog 🐶">
+                <img src="./imgs/cat.png" alt="Cat" id="cat" data-choice="cat 🐱">
+                <img src="./imgs/mouse1.png" alt="Mouse" id="mouse" data-choice="mouse 🐭">
+            </div>
+            <p id="choices"></p>
+            <p id="roundWinner"></p>
+            <p id="victor"></p>
+        </section>
     </main>
+    <img class="paws" id="paw-heart" src="./imgs/heart-with-paw-prints.png" alt="" aria-hidden="true">
+    <img class="paws" id="bottom-left" src="./imgs/paw.gif" alt="" aria-hidden="true">
+    <img class="paws" id="bottom-leftTop" src="./imgs/paw.gif" alt="" aria-hidden="true">
+    <img class="paws" id="top-right" src="./imgs/paw.gif" alt="" aria-hidden="true">
+    <img class="paws" id="top-rightTop" src="./imgs/paw.gif" alt="" aria-hidden="true">
     <footer class="credits">
         Cursors by: <br>
-        <a target="_blank" href="https://icons8.com/icon/102476/dog-paw">Dog Paw</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a><br>
-        <a target="_blank" href="https://icons8.com/icon/103475/cat-footprint">Cat Footprint</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a><br>
-        <a target="_blank" href="https://icons8.com/icon/dKXF6nEK79Pz/year-of-rat">Year of Rat</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+        <a target="_blank" href="https://icons8.com/icon/50513/dog-paw">Dog Paw</a> icon by <a target="_blank" href="https://icons8.com">Icons8,</a>  
+        <a target="_blank" href="https://icons8.com/icon/103475/cat-footprint">Cat Footprint</a> icon by <a target="_blank" href="https://icons8.com">Icons8,</a> 
+        <a target="_blank" href="https://icons8.com/icon/30985/year-of-rat">Year of Rat</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
     </footer>
 </body>
 </html>

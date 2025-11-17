@@ -1,27 +1,207 @@
+.irish-grover-regular {
+    font-family: "Irish Grover", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
 body {
     text-align: center;
-    color:white;
-    background-color: rgb(97, 54, 4);
+    background-color: #e1fdcf;
     cursor: url('https://icons.iconarchive.com/icons/iconsmind/outline/32/Dog-Paw-icon.png'), auto;
-
+    font-family: "Irish Grover", system-ui;
 }
 
-img {
-    margin: 50px;
+h1, h2, #computerScore, #humanScore, .boldText, a, button {
+    color: #104d01; 
+}
+h2 {
+    margin: 0;
+}
+#computerScore, #humanScore {
+    display: inline-block;
+    margin: 10px 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.game img {
+    margin: 30px;
+    padding: 10px;
+    max-height: 150px;
+    border-radius: 50%;
+    border: 7px inset #a0ff69;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+.game img:hover {
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 8px #61ffe5);
+    border: 7px outset #a0ff69;
 }
 #dog:hover {
-    cursor: url('./assets/icons8-dog-paw-30.png') 8 8, pointer;
+    cursor: url('./assets/icons8-dog-paw-40.png') 8 8, pointer;
 }
 #cat:hover {
-    cursor: url('./assets/icons8-cat-footprint-24.png') 8 8, pointer;
+    cursor: url('./assets/icons8-cat-footprint-40.png') 6 6, pointer;
 } 
 #mouse:hover {
-    cursor: url('./assets/icons8-year-of-rat-24.png') 8 8, pointer;
+    cursor: url('./assets/icons8-year-of-rat-40.png') 8 8, pointer;
 }
 
+.boldText {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#victor {
+    margin-top: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #104d01;
+}
+
+button {
+    background-color: #a0ff69;
+    border: 7px inset #a0ff69;
+    border-radius: 25px;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    padding: 10px 20px;
+    margin: 10px;
+    font-weight: bolder;
+    font-size: 1.1rem;
+    font-family: "Irish Grover", system-ui;
+}
+button:hover {
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 8px #61ffe5);
+    border: 7px outset #a0ff69;
+}
 /* footer */
 footer {
-    position: fixed;
+    position: absolute;
     bottom: 0;
-    left: 44%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 6px;
+}
+
+/* background images */
+.paws {
+    position: absolute;
+    width: 50px;
+}
+
+#bottom-left, #bottom-leftTop {
+    left: 20%;
+}
+#bottom-left, #paw-heart {
+    bottom: 10%;
+}
+#bottom-leftTop {
+    bottom: 15%;
+}
+#top-right, #top-rightTop, #paw-heart {
+    right: 20%;
+}
+#top-right {
+    top: 15%;
+}
+#top-rightTop {
+    top: 10%;
+}
+#paw-heart {
+    width: 100px;
+}
+
+/* Tablet: 1024px and below */
+@media screen and (max-width: 1024px) {
+    .game img {
+        max-height: 100px;
+    }
+    #bottom-left, #bottom-leftTop {
+        left: 10%;
+    }
+    #bottom-left {
+        bottom: 10%;
+    }
+    #bottom-leftTop {
+        bottom: 15%;
+    }
+    #top-right, #top-rightTop {
+        right: 10%;
+    }
+    #top-right {
+        top: 19%;
+    }
+    #top-rightTop {
+        top: 14%;
+    }
+}
+
+/* Mobile: 600px and below */
+@media screen and (max-width: 590px) {
+    #computerScore, #humanScore {
+        margin: 10px;
+    }
+    footer {
+        margin-top: 30px;
+        font-size: 0.8rem;
+        position: relative;
+    }
+    #paw-heart {
+        width: 70px;
+        bottom: 3%;
+        right: 7%;
+    }
+    .paws {
+        width: 30px;
+    }
+    #bottom-left, #bottom-leftTop {
+        left: 2%;
+    }
+    #bottom-left {
+        bottom: 25%;
+    }
+    #bottom-leftTop {
+        bottom: 30%;
+    } 
+    #top-right, #top-rightTop {
+        right: 2%;
+    } 
+    #top-right {
+        top: 43%;
+    }
+    #top-rightTop {
+        top: 38%;
+    }
+}
+
+/* Extra Small: 425px and below */
+@media screen and (max-width: 425px) {
+    .game img {
+        max-height: 70px;
+        display: block;
+        margin: 20px auto;
+    }
+    h1, #victor {
+        font-size: 1.5rem;
+    }
+    h2, #humanScore, #computerScore {
+        font-size: 1.2rem;
+    }
+    #choices {
+        font-size: 1rem;
+    }
+    p, button {
+        font-size: 0.9rem;
+    }
+    #paw-heart {
+        bottom: 25%;
+        right: 3%;
+    }
 }
