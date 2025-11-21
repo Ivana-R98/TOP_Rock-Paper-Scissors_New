@@ -7,16 +7,27 @@
 html, body {
     padding: 0;
     margin: 0;
+    height: 100%;
 }
 body {
     text-align: center;
     background-color: #e1fdcf;
     cursor: url('https://icons.iconarchive.com/icons/iconsmind/outline/32/Dog-Paw-icon.png'), auto;
     font-family: "Irish Grover", system-ui;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+main {
+    flex: 1;
 }
 
 h1, h2, #computerScore, #humanScore, .boldText, a, button {
     color: #104d01; 
+}
+h1 {
+    margin-top: 3%;
 }
 h2 {
     margin: 0;
@@ -81,9 +92,6 @@ button:hover {
 }
 /* footer */
 footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
     width: 100%;
     text-align: center;
     padding-top: 10px;
@@ -120,8 +128,21 @@ footer {
 
 /* Tablet: 1024px and below */
 @media screen and (max-width: 1024px) {
+    main, header {
+        width: 70%;
+        margin: auto;
+    }
+    h1 small {
+        display: block;
+    }
     .game img {
         max-height: 100px;
+    }
+    #paw-heart {
+        width: 70px;
+    }
+    .paws {
+        width: 30px;
     }
     #bottom-left, #bottom-leftTop {
         left: 10%;
@@ -136,15 +157,18 @@ footer {
         right: 10%;
     }
     #top-right {
-        top: 19%;
+        top: 23%;
     }
     #top-rightTop {
-        top: 14%;
+        top: 18%;
     }
 }
 
 /* Mobile: 600px and below */
-@media screen and (max-width: 590px) {
+@media screen and (max-width: 600px) {
+    main {
+        height: auto;
+    }
     #computerScore, #humanScore {
         margin: 10px;
     }
@@ -154,12 +178,8 @@ footer {
         position: relative;
     }
     #paw-heart {
-        width: 70px;
         bottom: 3%;
         right: 7%;
-    }
-    .paws {
-        width: 30px;
     }
     #bottom-left, #bottom-leftTop {
         left: 2%;
@@ -174,10 +194,10 @@ footer {
         right: 2%;
     } 
     #top-right {
-        top: 45%;
+        top: 50%;
     }
     #top-rightTop {
-        top: 40%;
+        top: 45%;
     }
 }
 
@@ -210,4 +230,25 @@ footer {
     #top-rightTop {
         top: 40%;
     }
+}
+
+/* for extra small in height */ 
+@media screen and (max-height: 800px) {
+    #paw-heart {
+        position:fixed;
+        bottom: 20px;
+        right: 2%;
+    }
+    #top-right {
+        top: 45%;
+    }
+    #top-rightTop {
+        top: 35%;
+    }
+    #bottom-left {
+        bottom: 20%;
+    }
+    #bottom-leftTop {
+        bottom: 30%;
+    } 
 }
