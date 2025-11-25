@@ -4,7 +4,7 @@ A simple Rock Paper Scissors game built with JavaScript as part of The Odin Proj
 ## Current Version
 Console-based gameplay using `prompt()` and `console.log()`.
 
-### Pseudocode
+### Development Notes
 1. Define an array 'choices' with ['rock', 'paper', 'scissors']
 2. Create a function getComputerChoice():
 - Randomly pick one value from 'choices'
